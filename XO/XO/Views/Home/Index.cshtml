@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    <link type="text/css" rel="stylesheet" href="../../Content/XO.css" />
+</head>
+<body>
+    <div class="X">
+        @using (Ajax.BeginForm("Winner", new AjaxOptions { UpdateTargetId = "results" }))
+        {
+            <input type="submit" id="button1" name="s1" value="" /> <input type="submit" id="button2" name="s2" value=""/> <input type="submit" id="button3" name="s3" value=""/> <br />
+            <input type="submit" id="button4" name="s4" value=""/> <input type="submit" id="button5" name="s5" value=""/> <input type="submit" id="button6" name="s6" value=""/> <br />
+            <input type="submit" id="button7" name="s7" value=""/> <input type="submit" id="button8" name="s8" value=""/> <input type="submit" id="button9" name="s9" value=""/> <br />
+        }
+    </div>
+    <div id="results"></div>
+
+    @Scripts.Render("~/scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
+    <script type="text/javascript">
+        var i = 0;
+        $(function () {
+            $('input').one('click', function () {
+                var button = $(this).attr('id');
+                var element = document.getElementById(button);
+                if (i % 2 == 0) {
+                    $(element).val('X');
+                }
+                else {
+                    $(element).val('O');
+                }
+                i++;
+              
+            });
+            // function sometime() {
+            ////var mass = new Array([]);
+            ////var z = 1;
+            ////mass[0][0] = document.getElementById("button1").val();
+            ////mass[0][1] = document.getElementById("button2").val();
+            ////mass[0][2] = document.getElementById("button3").val();
+            ////mass[1][0] = document.getElementById("button4").val();
+            ////mass[1][1] = document.getElementById("button5").val();
+            ////mass[1][2] = document.getElementById("button6").val();
+            ////mass[2][0] = document.getElementById("button7").val();
+            ////mass[2][1] = document.getElementById("button8").val();
+            ////mass[2][2] = document.getElementById("button9").val();
+            //     var index = $("input").each(function (index) {
+            //         console.log(index + ": " + $(this).val());
+            //     });
+            //         alert(index);
+
+            // for (var j = 0; j < 3; j++) {
+            //     for (var k = 0; k < 3; k++) {
+            //         mass[j][k] = document.getElementById("button" + z);
+            //         z++;
+            //     }
+            //}
+            //z = 1;
+            //for (var j = 0; j < 3; j++) {
+            //    for (var k = 0; k < 3; k++) {
+            //        if ($(mass[j][0]) == $(mass[j][1]) && $(mass[j][1]) == $(mass[j][2]))
+            //        {
+            //            alert("Vin");
+            //        }
+            //else if ($(mass[0][k]).val == $(mass[0][]).val == $(mass[j][2]).val) {
+            //    alert("Vin");
+            //}
+            //else if ($(mass[0][0]).val == $(mass[1][1]).val == $(mass[2][2]).val) {
+            //    alert("Vin");
+            //}
+            //}
+            //}
+
+
+            //};
+
+        });
+            //function sometime() {
+            //    var mass = new Array([]);
+            //    var z = 1;
+            //    mass[0][0] = document.getElementById("button1").val();
+            //    mass[0][1] = document.getElementById("button2").val();
+            //    mass[0][2] = document.getElementById("button3").val();
+            //    mass[1][0] = document.getElementById("button4").val();
+            //    mass[1][1] = document.getElementById("button5").val();
+            //    mass[1][2] = document.getElementById("button6").val();
+            //    mass[2][0] = document.getElementById("button7").val();
+            //    mass[2][1] = document.getElementById("button8").val();
+            //    mass[2][2] = document.getElementById("button9").val();
+            //    alert();
+                // for (var j = 0; j < 3; j++) {
+                //     for (var k = 0; k < 3; k++) {
+                //         mass[j][k] = document.getElementById("button" + z);
+                //         z++;
+                //     }
+                //}
+                //z = 1;
+                //for (var j = 0; j < 3; j++) {
+                //    for (var k = 0; k < 3; k++) {
+                //        if ($(mass[j][0]) == $(mass[j][1]) && $(mass[j][1]) == $(mass[j][2]))
+                //        {
+                //            alert("Vin");
+                //        }
+                        //else if ($(mass[0][k]).val == $(mass[0][]).val == $(mass[j][2]).val) {
+                        //    alert("Vin");
+                        //}
+                        //else if ($(mass[0][0]).val == $(mass[1][1]).val == $(mass[2][2]).val) {
+                        //    alert("Vin");
+                        //}
+                    //}
+                //}
+
+
+            //};
+
+    </script>
+</body>
+</html>
