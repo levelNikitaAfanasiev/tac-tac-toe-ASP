@@ -8,14 +8,15 @@
     <link type="text/css" rel="stylesheet" href="../../Content/XO.css" />
 </head>
 <body>
-    <div class="X">
-        @using (Ajax.BeginForm("Winner", new AjaxOptions { UpdateTargetId = "results" }))
-        {
-            <input type="submit" id="button1" name="s1" value="" /> <input type="submit" id="button2" name="s2" value=""/> <input type="submit" id="button3" name="s3" value=""/> <br />
-            <input type="submit" id="button4" name="s4" value=""/> <input type="submit" id="button5" name="s5" value=""/> <input type="submit" id="button6" name="s6" value=""/> <br />
-            <input type="submit" id="button7" name="s7" value=""/> <input type="submit" id="button8" name="s8" value=""/> <input type="submit" id="button9" name="s9" value=""/> <br />
-        }
-    </div>
+        <div class="X">
+            @using (Ajax.BeginForm("Winner", new AjaxOptions { UpdateTargetId = "results" }))
+            {
+
+                <input type="submit" id="button1" name="s1" value="" /> <input type="submit" id="button2" name="s2" value="" /> <input type="submit" id="button3" name="s3" value="" /> <br />
+                <input type="submit" id="button4" name="s4" value="" /> <input type="submit" id="button5" name="s5" value="" /> <input type="submit" id="button6" name="s6" value="" /> <br />
+                <input type="submit" id="button7" name="s7" value="" /> <input type="submit" id="button8" name="s8" value="" /> <input type="submit" id="button9" name="s9" value="" /> <br />
+            }
+        </div>
     <div id="results"></div>
 
     @Scripts.Render("~/scripts/jquery-3.3.1.js")
@@ -28,9 +29,11 @@
                 var element = document.getElementById(button);
                 if (i % 2 == 0) {
                     $(element).val('X');
+                 
                 }
                 else {
                     $(element).val('O');
+               
                 }
                 i++;
               

@@ -2,8 +2,11 @@
 input {
     width: 50px;
     height: 50px;
+    margin: 0px;
+    
 }
-.X{
-    margin-top:100px;
-    margin-left:300px;
+.X {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-bottom: 0;
 }
