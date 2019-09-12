@@ -20,84 +20,48 @@ namespace XO.Controllers
             {
                 if (s1 != null)
                 {
-                    if (s[0, 0] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                   
                     s[0, 0] = s1;
                 }
                 if (s2 != null)
                 {
-                    if (s[0, 1] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                  
                     s[0, 1] = s2;
                 }
                 if (s3 != null)
                 {
-                    if (s[0, 2] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                   
 
                     s[0, 2] = s3;
                 }
                 if (s4 != null)
                 {
-                    if (s[1, 0] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                   
                     s[1, 0] = s4;
                 }
                 if (s5 != null)
                 {
-                    if (s[1, 1] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                   
                     s[1, 1] = s5;
                 }
                 if (s6 != null)
                 {
-                    if (s[1, 2] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                   
                     s[1, 2] = s6;
                 }
                 if (s7 != null)
                 {
-                    if (s[2, 0] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                  
                     s[2, 0] = s7;
                 }
                 if (s8 != null)
                 {
-                    if (s[2, 1] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                  
                     s[2, 1] = s8;
                 }
                 if (s9 != null)
                 {
-                    if (s[2, 2] != null)
-                    {
-                        s = null;
-                        s = new string[3, 3];
-                    }
+                  
                     s[2, 2] = s9;
                 }
                 for (int i = 0; i < 3; i++)
