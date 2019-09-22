@@ -18,6 +18,10 @@ namespace XO
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Winner",
+                url: "{controller}/{action}/{s1}/{s2}/{s3}/{s4}/{s5}/{s6}/{s7}/{s8}/{s9}/"
+            );
         }
     }
 }
